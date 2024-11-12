@@ -1,1 +1,0 @@
-# Comparator operator (==)  True or false
