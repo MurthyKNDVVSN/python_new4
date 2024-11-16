@@ -2,7 +2,7 @@
 # IF Marks b/t 90 to 100 --> print a s grade -a
 
 # logic building
-# accept int i/p --> let us say stored it in a variable score
+# accept int i/p --> let us say input stored it in a variable score
 # o/p is string
 
 
