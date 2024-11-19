@@ -7,13 +7,24 @@
 # -------
 # Actual logic
 
-SIDE1 = int(input("ENTER THE LENGTH OD SIDE1 :\n"))
-SIDE2 = int(input("ENTER THE LENGTH OD SIDE2 :\n"))
-SIDE3 = int(input("ENTER THE LENGTH OD SIDE3 :\n"))
+def classify_triangle(a, b, c):
+    if a > 0 and b > 0 and c > 0:
+        if a + b > c and a + c > b and b + c > a:
+            if a == b == c:
+                return "Equilateral"
+            elif a == b or b == c or a == c:
+                return "Isosceles"
+            else:
+                return "Scalene"
+        else:
+            print("Not a Triangle")
+    else:
+        print("Not a Valid Length")
 
-if SIDE1 == SIDE2 == SIDE3:
-    print("IT IS equilateral Traingle")
-elif SIDE1 == SIDE2 or SIDE2 == SIDE3 or SIDE1 == SIDE3:
-    print("IT IS A isosceles Traingle")
-else:
-    print("IT IS A scalene Traingle")
+
+side1 = float(input("Enter the first side: "))
+side2 = float(input("Enter the second side: "))
+side3 = float(input("Enter the third side: "))
+
+result = classify_triangle(side1, side2, side3)
+print(f"The triangle is classified as: {result}")
